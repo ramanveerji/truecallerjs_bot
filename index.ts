@@ -336,7 +336,7 @@ Deno.serve(
   },
 );
 
-function sendTgMessage(text: string, formatted = true) {
+function sendTgMessage(text: string, formatted = false) {
   return new Response(
     JSON.stringify({
       method: "sendMessage",
