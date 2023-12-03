@@ -111,18 +111,29 @@ Deno.serve(
       );
     }
 
-    if ((message.text as BotCommand) === "/help") {
-  const helpText = `
-    Welcome to the Truecaller Bot!\n
+    if ((message.text as BotCommand) === "/cmds") {
+  const cmdText = `
+    This is the Command Section!\n
     Here are the available commands:\n
     - /start: Start using the bot\n
     - /login: Log in to Truecaller\n
     - /installation_id: Set your installation ID\n
     - /logout: Log out from Truecaller\n
-    - /stop: Delete and block\n
     - /info: Get information about your bot\n
-    - /search: Search for a phone number\n
+    - /cmds: Show all the commands\n
     - /help: Show this help message\n
+  `;
+  return sendTgMessage(cmdText);
+}
+
+    if ((message.text as BotCommand) === "/help") {
+  const helpText = `
+    This is the Help Section!\n
+    1. You need to /login to Truecaller with your existing account to use the bot.\n
+    2. Only you will be using your own account to search the numbers.\n
+    3. After login just send me the number you want to search. I will search and give you the result.\n
+    4. Send me the number with country code if you want to search an international number like this +1 123 456 7890.\n\n
+    You can check commands by clicking here /cmds.
   `;
   return sendTgMessage(helpText);
 }
