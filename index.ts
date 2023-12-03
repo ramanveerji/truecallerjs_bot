@@ -134,7 +134,8 @@ Deno.serve(
     1. You need to /login to Truecaller with your existing account to use the bot.\n
     2. Only you will be using your own account to search the numbers.\n
     3. After login just send me the number you want to search. I will search and give you the result.\n
-    4. Send me the number with country code if you want to search an international number like this +1 123 456 7890.\n\n
+    4. Send me the number with country code if you want to search an international number like this +1 123 456 7890.\n
+    5. For Indian numbers, you can send the number directly without the +91 code.\n\n
     You can check commands by clicking here /cmds.
   `;
   return sendTgMessage(helpText);
