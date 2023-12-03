@@ -19,6 +19,8 @@ This is a Deno project currently deployed on Deno Deploy. It uses Deno KV which 
    installation_id - Login via existing token
    logout - Logout from Truecaller
    info - Information about the bot
+   help - Shows Help menu
+   cmds - Shows All commands
    ```
 
 3. [Set the webhook URL](https://core.telegram.org/bots/api#setwebhook) after deploying the bot using the following procedure.
