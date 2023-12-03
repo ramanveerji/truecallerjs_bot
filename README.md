@@ -23,6 +23,14 @@ This is a Deno project currently deployed on Deno Deploy. It uses Deno KV which 
 
 3. [Set the webhook URL](https://core.telegram.org/bots/api#setwebhook) after deploying the bot using the following procedure.
 
+Edit this URL to set the webhook
+
+```https://api.telegram.org/bot{my_bot_token}/setWebhook?url={url_to_send_updates_to}```
+
+Change it to 
+
+```https://api.telegram.org/bot16451453:shgbdfbsjkfjksbfjksjkgfnsjknf/setWebhook?url=deno_url.com```
+
 ### Deno Deploy
 
 1. [Fork](/../../fork) this repo on GitHub.
