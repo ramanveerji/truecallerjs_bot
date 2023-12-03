@@ -103,13 +103,37 @@ Deno.serve(
       status: "logged_out",
     };
 
-    if ((message.text as BotCommand) === "/start") {
-      if (kvValue.status === "logged_out") reportEvent("/start");
+if ((message.text as BotCommand) === "/start") {
+  if (kvValue.status === "logged_out") reportEvent("/start");
 
-      return sendTgMessage(
-        "You need to /login to Truecaller with your existing account to use the bot.\nOnly you will be using your own account to search the numbers.",
-      );
-    }
+  // Add the greeting message here
+  const greetingMessage = `Hi! *${message.from_user.first_name}*\nI am *RS Truecaller BOT*.\n\nYou need to /login to Truecaller with your existing account to use the bot. Only you will be using your own account to search the numbers.`;
+
+  // Add the inline keyboard button
+  const inlineKeyboard = {
+    inline_keyboard: [
+      [
+        { text: "Buy Me A Coffee ☕", url: "https://upayme.vercel.app/ramanveerji@paytm" },
+      ],
+    ],
+  };
+
+  return new Response(
+    JSON.stringify({
+      method: "sendMessage",
+      chat_id: tgChatId!,
+      parse_mode: "MarkdownV2",
+      disable_web_page_preview: true,
+      text: greetingMessage,
+      reply_markup: inlineKeyboard,
+    } as BotParams<"sendMessage">),
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    },
+  );
+}
 
     if ((message.text as BotCommand) === "/info") {
       let status: string;
