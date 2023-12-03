@@ -129,7 +129,7 @@ Deno.serve(
         : "";
 
       const about =
-        "*Brought to you by* [TeamRS](https://telegram.dog/rs_bro)*\\|* [Buy us a Coffee](https://upayme.vercel.app/ramanveerji@paytm)";
+        "*Brought to you by* [TeamRS](https://telegram.dog/rs_bro) *\\|* [Buy us a Coffee](https://upayme.vercel.app/ramanveerji@paytm)";
 
       return sendTgMessage(`${status}${installationId}\n\n${about}`, true);
     }
@@ -336,7 +336,7 @@ Deno.serve(
   },
 );
 
-function sendTgMessage(text: string, formatted = false) {
+function sendTgMessage(text: string, formatted = true) {
   return new Response(
     JSON.stringify({
       method: "sendMessage",
