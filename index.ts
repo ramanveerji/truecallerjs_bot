@@ -2,7 +2,7 @@ import type {
   ApiMethods,
   Opts,
   Update,
-} from "https://deno.land/x/grammy_types@v3.1.2/mod.ts";
+} from "https://deno.land/x/grammy_types@v3.3.0/mod.ts";
 import {
   login,
   search,
@@ -129,7 +129,7 @@ Deno.serve(
         : "";
 
       const about =
-        "[Source Code](https://github.com/ni554n/truecallerjs_bot) *\\|* [anissan\\.com](https://anissan.com)";
+        "Brought to you by [TeamRS](https://telegram.dog/rs_bro)";
 
       return sendTgMessage(`${status}${installationId}\n\n${about}`, true);
     }
