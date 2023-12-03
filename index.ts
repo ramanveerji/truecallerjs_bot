@@ -107,7 +107,7 @@ Deno.serve(
       if (kvValue.status === "logged_out") reportEvent("/start");
 
       return sendTgMessage(
-        "Hi! my friend. I am RS Truecaller BOT.\n\nYou need to /login to Truecaller with your existing account to use the bot.\nOnly you will be using your own account to search the numbers.",
+        "Hi! my friend. I am *RS Truecaller BOT*.\n\n*HOW TO USE?*\n\n1. You need to /login to Truecaller with your existing account to use the bot.\n2. Only you will be using your own account to search the numbers.\n3. After login just send me the number you want to search. I will search and give you the result.\n4. Send me the number with country code if you want to search an international number like this `+1 123 456 7890`.",
       );
     }
 
@@ -129,7 +129,7 @@ Deno.serve(
         : "";
 
       const about =
-        "Brought to you by [TeamRS](https://telegram.dog/rs_bro)*\\|* [Buy us a Coffee](https://upayme.vercel.app/ramanveerji@paytm)";
+        "*Brought to you by* [TeamRS](https://telegram.dog/rs_bro)*\\|* [Buy us a Coffee](https://upayme.vercel.app/ramanveerji@paytm)";
 
       return sendTgMessage(`${status}${installationId}\n\n${about}`, true);
     }
