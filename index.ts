@@ -112,8 +112,20 @@ Deno.serve(
     }
 
     if ((message.text as BotCommand) === "/help") {
-      return sendTgMessage("*HELP MENU*\n\n1. You need to /login to Truecaller with your existing account to use the bot.\n2. Only you will be using your own account to search the numbers.\n3. After login just send me the number you want to search. I will search and give you the result.\n4. Send me the number with country code if you want to search an international number like this `+1 123 456 7890`.", true);
-    }
+  const helpText = `
+    Welcome to the Truecaller Bot!\n
+    Here are the available commands:\n
+    - /start: Start using the bot\n
+    - /login: Log in to Truecaller\n
+    - /installation_id: Set your installation ID\n
+    - /logout: Log out from Truecaller\n
+    - /stop: Delete and block\n
+    - /info: Get information about your bot\n
+    - /search: Search for a phone number\n
+    - /help: Show this help message\n
+  `;
+  return sendTgMessage(helpText);
+}
     
     if ((message.text as BotCommand) === "/info") {
       let status: string;
