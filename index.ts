@@ -103,13 +103,13 @@ Deno.serve(
       status: "logged_out",
     };
 
-if ((message.text as BotCommand) === "/start") {
-  if (kvValue.status === "logged_out") reportEvent("/start");
+    if ((message.text as BotCommand) === "/start") {
+      if (kvValue.status === "logged_out") reportEvent("/start");
 
-  // Add the greeting message here
-  const greetingMessage = `Hi! my friend. I am RS Truecaller BOT.\n\nYou need to /login to Truecaller with your existing account to use the bot. Only you will be using your own account to search the numbers.`;
-  return sendTgMessage(greetingMessage, true);
-}
+      return sendTgMessage(
+        "Hi! my friend. I am RS Truecaller BOT.\n\nYou need to /login to Truecaller with your existing account to use the bot.\nOnly you will be using your own account to search the numbers.",
+      );
+    }
 
     if ((message.text as BotCommand) === "/info") {
       let status: string;
