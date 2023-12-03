@@ -109,7 +109,7 @@ Deno.serve(
       if (kvValue.status === "logged_out") reportEvent("/start");
 
       return sendTgMessage(
-        "Hi! my friend. I am RS Truecaller BOT.\n\nWant to use use me? Click here /help.",
+        "Hi! my friend. I am RS Truecaller BOT.\n\nWant to know how to use me? Click here /help.",
       );
     }
 
