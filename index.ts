@@ -20,7 +20,9 @@ type BotCommand =
   | "/logout"
   | "/stop"
   | "/info"
-  | "/search";
+  | "/search"
+  | "/help"
+  | "/cmds";
 
 let tgChatId: number | undefined;
 
